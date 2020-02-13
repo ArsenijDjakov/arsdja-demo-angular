@@ -5,9 +5,7 @@ cache: yarn
 script:
   - yarn lint
   - yarn test --watch=false --browsers=ChromeHeadless
-  - npm install protractor -g
-  - protractor --version
-  - webdriver-update
-  - webdriver-start
+  - yarn webdriver-update
+  - yarn webdriver-start
   - yarn ci-e2e
   - yarn build --prod
